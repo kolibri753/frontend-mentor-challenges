@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: hsl(234, 12%, 34%);
+  background-color: hsl(0, 0%, 98%);
+}
+
+header {
+  max-width: 600px;
+  margin: 80px auto 30px;
+  text-align: center;
+}
+
+h1,
+h1 span {
+  font-size: 36px;
+}
+
+h1 {
+  font-weight: 200;
+  margin: 0;
+}
+
+h1 span {
+  font-weight: 600;
+}
+
+p {
+  color: hsl(229, 6%, 66%);
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 60px auto;
+  max-width: 1230px;
+}
+
+.box {
+  width: 350px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  /* border-top: 3px solid #000; */
+  padding: 30px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.box::after {
+  content: '';
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
+
+.red::after {
+  background-color: hsl(0, 78%, 62%);
+}
+
+.cyan::after {
+  background-color: hsl(180, 62%, 55%);
+}
+
+.orange::after {
+  background-color: hsl(34, 97%, 64%);
+}
+
+.blue::after {
+  background-color: hsl(212, 86%, 64%);
+}
+
+.box-push {
+  transform: translateY(50%);
+}
+
+.box__title {
+ margin: 0;
+ font-size: 21px;
+}
+
+.box__text {
+  font-size: 14px;
+  margin: 15px 0 30px;
+  color: hsl(229, 6%, 66%)
+}
+
+.box__icon {
+  display: block;
+  margin-left: auto;
+}
+
+@media (max-width: 1165px) {
+  .box-push {
+    transform: translateY(0%);
+  }
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    max-width: 400px;
+  }
+
+  h1,
+  h1 span {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  header {
+    max-width: 300px;
+  }
+
+  h1,
+  h1 span {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .box__title {
+    font-size: 20px;
+  }
+
+  .box__text {
+    font-size: 13px;
+  }
+}
