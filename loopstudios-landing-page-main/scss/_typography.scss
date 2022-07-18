@@ -1,0 +1,62 @@
+@use "fonts" as f;
+@use "mixins" as m;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// ul[class],
+// ol[class] {
+//   padding: 0;
+// }
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+// html,
+// body {
+//   height: 100%;
+// }
+
+html {
+  font-family: f.$alata;
+  font-size: 15px;
+
+  @include m.respond-to("lg") {
+    font-size: 13px;
+  }
+
+  // @include m.respond-to("small") {
+  //   font-size: 11px;
+  // }
+}
+
